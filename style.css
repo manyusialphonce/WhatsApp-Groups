@@ -82,3 +82,8 @@ button:hover {
   text-align: center;
   color: #0f0;
 }
+.container {
+  width: 90%;
+  max-width: 450px;
+  padding: 30px;
+}
