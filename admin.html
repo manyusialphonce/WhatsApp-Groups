@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 class="glow">Saved Contacts</h2>
+
+<div id="list"></div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("contacts")) || [];
+let html = "";
+
+data.forEach((c, i) => {
+  html += `<p>${i+1}. ${c.name} - ${c.phone} (${c.group})</p>`;
+});
+
+document.getElementById("list").innerHTML = html || "No data saved";
+</script>
+
+</body>
+</html>
