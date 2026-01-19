@@ -8,16 +8,23 @@
 
 <h2>Submit WhatsApp Group</h2>
 
-<form onsubmit="saveGroup(); return false;">
-  <input type="text" name="group_name" placeholder="Group Name" required>
-  <input type="text" name="user_name" placeholder="Your Name" required>
-  <input type="text" name="phone" placeholder="Phone Number" required>
-  <button type="submit">Save Group</button>
-</form>
+<input type="text" id="group_name" placeholder="Group Name" required>
+<input type="text" id="user_name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Phone Number" required>
+
+<button type="button" onclick="saveGroup()">Save Group</button>
 
 <script>
 function saveGroup() {
-  alert("Saved successfully (GitHub demo). Backend works on hosting.");
+  const group = document.getElementById("group_name").value;
+  const user = document.getElementById("user_name").value;
+  const phone = document.getElementById("phone").value;
+
+  if(group && user && phone){
+    alert("Saved successfully (GitHub Demo Mode)");
+  } else {
+    alert("Please fill all fields");
+  }
 }
 </script>
 
