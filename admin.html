@@ -6,19 +6,21 @@
 </head>
 <body>
 
-<h2 class="glow">Saved Contacts</h2>
-
-<div id="list"></div>
+<div class="container">
+  <h2 class="glow">Admin – Saved Contacts</h2>
+  <div id="list"></div>
+</div>
 
 <script>
 const data = JSON.parse(localStorage.getItem("contacts")) || [];
-let html = "";
 
+let html = "";
 data.forEach((c, i) => {
   html += `<p>${i+1}. ${c.name} - ${c.phone} (${c.group})</p>`;
 });
 
-document.getElementById("list").innerHTML = html || "No data saved";
+document.getElementById("list").innerHTML =
+  html || "<p>No data saved yet</p>";
 </script>
 
 </body>
