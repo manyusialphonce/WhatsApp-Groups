@@ -1,52 +1,55 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #e8f0fe;
-    text-align: center;
-    padding: 20px;
+  background: linear-gradient(120deg, #1e3c72, #2a5298);
+  font-family: Arial;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h2 { color: #34b7f1; }
+.container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  animation: slide 1s ease;
+}
 
-form input {
-    display: block;
-    width: 90%;
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+@keyframes slide {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.title {
+  text-align: center;
+  color: #2a5298;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 button {
-    padding: 10px 20px;
-    border: none;
-    background: #25D366;
-    color: white;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background: #2a5298;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-button:hover { background: #128C7E; }
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    animation: fadeIn 1s ease;
+button:hover {
+  background: #1e3c72;
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-tr:nth-child(even) { background-color: #f9f9f9; transition: background 0.5s; }
-tr:hover { background-color: #c8f7c5; }
-
-@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-
-.qr-icon {
-    width: 30px;
-    vertical-align: middle;
+#msg {
+  text-align: center;
+  color: green;
+  margin-top: 10px;
 }
