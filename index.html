@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>WhatsApp Groups</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Repository Form</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Submit WhatsApp Group</h2>
+<div class="container">
+  <h2 class="title">Add WhatsApp Group</h2>
 
-<input type="text" id="group_name" placeholder="Group Name" required>
-<input type="text" id="user_name" placeholder="Your Name" required>
-<input type="text" id="phone" placeholder="Phone Number" required>
+  <!-- FORM IPO -->
+  <form id="groupForm">
+    <input type="text" id="group" placeholder="Group Name" required>
+    <input type="text" id="user" placeholder="Your Name" required>
+    <input type="text" id="phone" placeholder="Phone Number" required>
 
-<button type="button" onclick="saveGroup()">Save Group</button>
+    <button type="submit">Save</button>
+  </form>
 
-<script>
-function saveGroup() {
-  const group = document.getElementById("group_name").value;
-  const user = document.getElementById("user_name").value;
-  const phone = document.getElementById("phone").value;
+  <p id="msg"></p>
+</div>
 
-  if(group && user && phone){
-    alert("Saved successfully (GitHub Demo Mode)");
-  } else {
-    alert("Please fill all fields");
-  }
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
