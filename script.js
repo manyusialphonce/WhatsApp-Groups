@@ -1,12 +1,16 @@
-document.getElementById("groupForm").addEventListener("submit", function(e){
-  e.preventDefault(); // 🔥 HII NDIO MUHIMU (INAUA 405)
+document.getElementById("techForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-  const group = document.getElementById("group").value;
-  const user = document.getElementById("user").value;
-  const phone = document.getElementById("phone").value;
+  const data = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    group: document.getElementById("group").value
+  };
 
-  if(group && user && phone){
-    document.getElementById("msg").innerText = "Saved successfully!";
-    this.reset();
-  }
+  let saved = JSON.parse(localStorage.getItem("contacts")) || [];
+  saved.push(data);
+  localStorage.setItem("contacts", JSON.stringify(saved));
+
+  document.getElementById("msg").innerText = "Saved successfully!";
+  this.reset();
 });
