@@ -1,5 +1,5 @@
 document.getElementById("techForm").addEventListener("submit", function(e){
-  e.preventDefault();
+  e.preventDefault(); // inazuia 405
 
   const data = {
     name: document.getElementById("name").value,
